@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,SafeAreaView, Image } from 'react-native';
+import { StyleSheet, Text, View,SafeAreaView, Image, ImageBackground } from 'react-native';
 
 export default function App() {
   return (
@@ -17,12 +17,45 @@ export default function App() {
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
       <Text style={{ fontSize: 25, fontStyle: 'italic', letterSpacing: 3}}>Our Story</Text>
       <View style={{flexDirection: 'row', gap: 25}}> 
+        <View>
         <Image source={require('./assets/Menu.png')} />
+        </View>
+        <View>
         <Image source={require('./assets/Menu.png')} />
+        </View>
       </View>
         </View>
         
       
+      <View style={{flexDirection: 'row', gap: 20, }}>
+        <View>
+          <View>
+          <ImageBackground source={require('./assets/dress1.png')} resizeMode='contain' style={{height: 250, width: 180}}/>
+          <Image source={require('./assets/add_circle.png')}
+        style={{ position: 'absolute',
+         bottom: 10,
+         right: 10,}}  
+          />
+        </View>
+        <Text>Office wear</Text>
+        <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
+        <Text style={{color: '#FF5B61'}}>$120</Text>
+        </View>
+
+        <View>
+          <View>
+        <ImageBackground source={require('./assets/dress2.png')} resizeMode='contain' style={{height: 250, width: 180}}/>
+        <Image source={require('./assets/add_circle.png')}
+        style={{ position: 'absolute',
+         bottom: 10,
+         right: 10,}}  
+          />
+          </View>
+       <Text>Black</Text> 
+      <Text style={{opacity: 0.5}}>reversible angora cardigan </Text>
+      <Text style={{color: '#FF5B61'}}>$120</Text>
+        </View>
+      </View>
 
       
       <StatusBar style="auto" />
