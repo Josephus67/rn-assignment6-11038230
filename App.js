@@ -57,7 +57,41 @@ export default function App() {
         </View>
       </View>
 
+<View style={{flexDirection: 'column'}}>
+
+      <View style={{flexDirection: 'row', gap: 20, }}>
+        <View>
+          <View>
+          <ImageBackground source={require('./assets/dress3.png')} resizeMode='contain' style={{height: 250, width: 180}}/>
+          <Image source={require('./assets/add_circle.png')}
+        style={{ position: 'absolute',
+         bottom: 10,
+         right: 10,}}  
+          />
+        </View>
+        <Text>Church Wear</Text>
+        <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
+        <Text style={{color: '#FF5B61'}}>$120</Text>
+        </View>
+
+        <View>
+          <View>
+        <ImageBackground source={require('./assets/dress4.png')} resizeMode='contain' style={{height: 250, width: 180}}/>
+        <Image source={require('./assets/add_circle.png')}
+        style={{ position: 'absolute',
+         bottom: 10,
+         right: 10,}}  
+          />
+          </View>
+       <Text>Lamerei</Text> 
+      <Text style={{opacity: 0.5}}>reversible angora cardigan </Text>
+      <Text style={{color: '#FF5B61'}}>$120</Text>
+        </View>
+      </View>
       
+
+</View>
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
