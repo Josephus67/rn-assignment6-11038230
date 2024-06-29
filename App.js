@@ -4,23 +4,27 @@ import { StyleSheet, Text, View,SafeAreaView, Image } from 'react-native';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      
         <View style={styles.first_view}>
-        <Image source={require('./assets/Menu.png')} />
-        <View>
-        <Text style={{ fontSize: 25, fontWeight: "bold"}}>Open</Text>
-        <Text style={{ fontSize: 25, fontWeight: "bold"}}>Fashion</Text>
-        </View>
+          <Image source={require('./assets/Menu.png')} />
+       <Image source={require('./assets/Logo.png')} />
         <View style={{flexDirection: 'row', gap: 15}}>
        <Image source={require('./assets/Search.png')} />
         <Image source={require('./assets/shoppingBag.png')} />
         </View>
         </View>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <Text style={{ fontSize: 25, fontStyle: 'italic', letterSpacing: 3}}>Our Story</Text>
+      <View style={{flexDirection: 'row', gap: 25}}> 
+        <Image source={require('./assets/Menu.png')} />
+        <Image source={require('./assets/Menu.png')} />
+      </View>
+        </View>
+        
       
 
-      <Text style={{ fontSize: 25}}>Our Story</Text>
-
-</View>
+      
       <StatusBar style="auto" />
     </SafeAreaView>
   );
