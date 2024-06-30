@@ -1,106 +1,49 @@
 /*
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,SafeAreaView, Image, ScrollView } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Feather from 'react-native-vector-icons/Feather';
+
+import Page1 from './Page1';
+import Page2 from './Page2';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      
-        <View style={styles.first_view}>
-          <Image source={require('./assets/Menu.png')} />
-       <Image source={require('./assets/Logo.png')} />
-        <View style={{flexDirection: 'row', gap: 15}}>
-       <Image source={require('./assets/Search.png')} />
-        <Image source={require('./assets/shoppingBag.png')} />
-        </View>
-        </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+      <Tab.Screen name=" " component={Page1} />
 
-
-        <ScrollView vertical showsVerticalScrollIndicator={true}>
-
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-      <Text style={{ fontSize: 25, fontStyle: 'italic', letterSpacing: 3}}>Our Story</Text>
-      <View style={{flexDirection: 'row', gap: 25}}> 
-        <View>
-        <Image source={require('./assets/Menu.png')}  />
-        </View>
-        <View>
-        <Image source={require('./assets/Menu.png')} />
-        </View>
-      </View>
-        </View>
-
-
-
-        <View style={{flexDirection: 'column',justifyContent: 'flex-evenly'}}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-evenly', gap: 20}}>
-    <View>
-    <Image source={require('./assets/dress1.png')} style={styles.left_Images}/>
-    <Text> Office Wear</Text>
-    <Text>reversible angora cardigan</Text>
-    <Text>$120</Text>    
-      </View>
-    <View>
-      <Image source={require('./assets/dress2.png')} style={styles.left_Images}/>
-      <Text>Black</Text>
-      <Text>reversible angora cardigan</Text>
-      <Text>$120</Text>
-    </View>
-      </View>
-
-
-
-      <View style={{flexDirection: 'row', justifyContent: 'space-evenly', gap: 20}}>
-    <View>
-    <Image source={require('./assets/dress1.png')} style={styles.left_Images}/>
-    <Text> Office Wear</Text>
-    <Text>reversible angora cardigan</Text>
-    <Text>$120</Text>    
-      </View>
-    <View>
-    <Image source={require('./assets/dress2.png')} style={styles.left_Images} />
-    <Text>Black</Text>
-      <Text>reversible angora cardigan</Text>
-      <Text>$120</Text>
-    </View>
-      </View>
-
-
-      
-
-
-     
-</View>
-</ScrollView>
-
-      <StatusBar style="auto" />
-    </SafeAreaView>
+        <Tab.Screen name="  " component={Page2} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-   paddingLeft: 20,
-   paddingRight: 20,
-  },
-  first_view: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    height: 400,
-    marginTop: 10,
-    position: 'absolute'
-    },
-    left_Images: {
- //transform: [{ scale: 0.8 }], 
- //width: '180%', 
- //height: '50%',
- //marginLeft: -70,
-    }
-});
 */
 /*
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Feather from 'react-native-vector-icons/Feather';
+
+import Page1 from './App';
+import Page2 from './Page2';
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Page1" component={Page1} />
+        <Tab.Screen name="Page2" component={Page2} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
+*/
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Dimensions, ImageBackground } from 'react-native';
 
@@ -112,7 +55,7 @@ export default function Page1() {
     <SafeAreaView style={styles.container}>
 
 <View style={styles.first_view}>
-          <Image source={require('./assets/Menu.png')} />
+      <Image source={require('./assets/Menu.png')} />
        <Image source={require('./assets/Logo.png')} />
         <View style={{flexDirection: 'row', gap: 15}}>
        <Image source={require('./assets/Search.png')} />
@@ -246,49 +189,3 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
 });
-*/
-
-/*
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Feather from 'react-native-vector-icons/Feather';
-
-import Page1 from './Page1';
-import Page2 from './Page2';
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-      <Tab.Screen name=" " component={Page1} />
-
-        <Tab.Screen name="  " component={Page2} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
-*/
-
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Feather from 'react-native-vector-icons/Feather';
-
-import Page1 from './Page1';
-import Page2 from './Page2';
-
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Page1" component={Page1} />
-        <Tab.Screen name="Page2" component={Page2} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
