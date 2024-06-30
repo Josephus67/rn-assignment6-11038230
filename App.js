@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
 */
 
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Dimensions, ImageBackground } from 'react-native';
 
 const { width } = Dimensions.get('window');
 const imageSize = width / 2; // Adjust the image size to fit within the screen
@@ -119,22 +119,16 @@ export default function App() {
         <Image source={require('./assets/shoppingBag.png')} />
         </View>
         </View>
-     {/* <View style={styles.first_view}>
-        <Image source={require('./assets/Menu.png')} style={styles.icon} />
-        <Image source={require('./assets/Logo.png')} style={styles.logo} />
-        <View style={styles.iconContainer}>
-          <Image source={require('./assets/Search.png')} style={styles.icon} />
-          <Image source={require('./assets/shoppingBag.png')} style={styles.icon} />
-        </View>
-      </View>*/}
 
       <View style={{ height: 20 }} />
       <ScrollView vertical showsVerticalScrollIndicator={false}>
         <View style={styles.imageContainer}>
           <View style={styles.row}>
           <View>
-            <Image source={require('./assets/dress1.png')} style={[styles.image, {marginLeft: -20}]} />
-            <View>
+            <Image source={require('./assets/dress1.png')} style={[styles.image, {marginLeft: -20}]}  />
+       <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
+           <View>
             <Text> Office Wear</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
@@ -142,6 +136,8 @@ export default function App() {
             </View>
             <View>
             <Image source={require('./assets/dress2.png')} style={[styles.image,{marginLeft: -20} ]}/>
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> Black</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
@@ -150,12 +146,16 @@ export default function App() {
           <View style={styles.row}>
           <View>
             <Image source={require('./assets/dress3.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> Church Wear</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
             </View>
             <View>
             <Image source={require('./assets/dress4.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> Lamerei</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
@@ -164,12 +164,16 @@ export default function App() {
           <View style={styles.row}>
           <View>
             <Image source={require('./assets/dress5.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> 2IWN</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
             </View>
             <View>
             <Image source={require('./assets/dress6.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> Lopo</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
@@ -178,12 +182,16 @@ export default function App() {
           <View style={styles.row}>
           <View>
             <Image source={require('./assets/dress7.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
             <Text> 2IWN</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
             </View>
             <View>
             <Image source={require('./assets/dress3.png')} style={[styles.image, {marginLeft: -20}]} />
+            <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+           <View style={{height: 5}}/>
           <Text> Lame</Text>
     <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
     <Text style={{color:'#FF5B61'}}>$120</Text> 
