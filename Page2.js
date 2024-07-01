@@ -12,15 +12,35 @@ export default function Page2() {
     </View>
     <View style={{height: 5}}/>
     <Text style={styles.checkout}>Checkout</Text>
-<View style={{flexDirection: 'column', gap: 10}}>
-    <View>
-      <Image source={require('./assets/dress1.png')} />
+<View style={{flexDirection: 'column'}}>
+    <View style={{flexDirection:'row'}}>
+      <Image source={require('./assets/dress1.png')} style={{transform: [{ scale: 0.8 }] }}/>
+      <View style={{marginTop: 80}}>
+            <Text style={styles.Office_wear}> OFFICE WEAR</Text>
+    <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
+    <Text style={{color:'#FF5B61'}}>$120</Text> 
     </View>
-    <View>
-    <Image source={require('./assets/dress2.png')} />
+    <Image source={require('./assets/remove.png')} style={{marginTop: 150}}/>
+
     </View>
-    <View>
-      <Image source={require('./assets/dress3.png')} />
+    <View style={{flexDirection:'row'}}>
+    <Image source={require('./assets/dress2.png')} style={{transform: [{ scale: 0.8 }] }}/>
+    <View style={{marginTop: 80}}>
+            <Text style={styles.Office_wear}> LAMEREI</Text>
+    <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
+    <Text style={{color:'#FF5B61'}}>$120</Text> 
+    </View>
+    <Image source={require('./assets/remove.png')} style={{marginTop: 150}}/>
+    </View>
+    <View style={{flexDirection:'row'}}>
+      <Image source={require('./assets/dress3.png')} style={{transform: [{ scale: 0.8 }] }}/>
+      <View style={{marginTop: 80}}>
+            <Text style={styles.Office_wear}> CHURCH WEAR</Text>
+    <Text style={{opacity: 0.5}}>reversible angora cardigan</Text>
+    <Text style={{color:'#FF5B61'}}>$120</Text> 
+    </View>
+    <Image source={require('./assets/remove.png')} style={{marginTop: 140}}/>
+
     </View>
     </View>
     </SafeAreaView>
@@ -46,9 +66,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textDecorationLine: 'underline',
   },
-  image: {
-    width: imageSize,
-    height: imageSize,
-    resizeMode: 'contain',
+ /* image: {
+    //width: imageSize,
+    //height: imageSize,
+    //resizeMode: 'contain',
   },
+  */
+ Office_wear: {
+  letterSpacing: 2.6,
+  fontSize: 18,
+ }
 });
