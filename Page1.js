@@ -1,11 +1,14 @@
 
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Dimensions, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
 const imageSize = width / 2; // Adjust the image size to fit within the screen
 
-export default function Page1() {
+export default function Page1({ navigation }) {
+
   return (
     <SafeAreaView style={styles.container}>
 
@@ -13,10 +16,22 @@ export default function Page1() {
       <Image source={require('./assets/Menu.png')} />
        <Image source={require('./assets/Logo.png')} />
         <View style={{flexDirection: 'row', gap: 15}}>
+       
        <Image source={require('./assets/Search.png')} />
-        <Image source={require('./assets/shoppingBag.png')} />
+         <TouchableOpacity onPress={() => navigation.navigate('Cart')}>
+            <Image source={require('./assets/shoppingBag.png')} />
+          </TouchableOpacity>
         </View>
         </View>
+        <View style={{height: 15}}/>
+<View style={{flexDirection: 'row', justifyContent: 'space-between', paddingLeft: 20, paddingRight: 20 }}>
+ <Text style={{letterSpacing: 3, fontSize: 22, fontStyle: 'italic'}}>OUR STORY</Text>
+<View style={{flexDirection: 'row',gap: 20, paddingRight: 20}}>
+<Image source={require('./assets/Listview.png')} />
+<Image source={require('./assets/Filter.png')} />
+</View>
+
+</View>
 
       <View style={{ height: 20 }} />
       <ScrollView vertical showsVerticalScrollIndicator={false}>
@@ -24,7 +39,26 @@ export default function Page1() {
           <View style={styles.row}>
           <View>
             <Image source={require('./assets/dress1.png')} style={[styles.image, {marginLeft: -20}]}  />
+       
+
+
+
+
+
+
+
+
+        <TouchableOpacity onPress={()=> console.log("hello world") }>       
        <Image source={require('./assets/add_circle.png')} style={{marginLeft:130, marginTop: -30 }}/>
+       </TouchableOpacity>
+       
+       
+       
+
+
+
+
+
            <View style={{height: 5}}/>
            <View>
             <Text> Office Wear</Text>
@@ -99,6 +133,7 @@ export default function Page1() {
       </ScrollView>
       <StatusBar style="auto" />
     </SafeAreaView>
+
   );
 }
 
