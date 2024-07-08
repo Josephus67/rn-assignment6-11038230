@@ -1,3 +1,5 @@
+![OpenFashion](https://github.com/Josephus67/rn-assignment6-11038230/assets/151669351/79785ae4-dfbc-429d-b1f7-e783a844eeb3)
+![Cartscreen](https://github.com/Josephus67/rn-assignment6-11038230/assets/151669351/1ad6a5fc-ffea-42ce-a997-d69e04cf195f)
 Project Overview
 This project is a React Native application that features a Home screen displaying a list of products and a Cart screen showing selected items. Users can add and remove items from their cart, with the data stored locally using AsyncStorage.
    
